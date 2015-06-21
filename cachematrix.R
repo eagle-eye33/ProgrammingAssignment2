@@ -23,10 +23,13 @@ makeCacheMatrix <- function(x = matrix()) {
     x <<- y
     mdata <<- NULL
   }
+  
   ## get the Matrix
   get <- function() x
+  
   ## set the inverse
   setInv <- function(inverse) mdata <<- inverse
+  
   ## get the inverse
   getInv <- function() mdata
   list(set=set, get=get, setInv=setInv, getInv=getInv)
